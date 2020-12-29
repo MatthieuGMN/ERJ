@@ -1,0 +1,60 @@
+\documentclass[9pt,twocolumn,twoside,lineno]{doc_org}
+% Use the documentclass option 'lineno' to view line numbers
+
+\articletype{org} % article type
+% {org} original 
+
+\AddToShipoutPicture{\unitlength=1cm % to release when finalizing an abstract.
+\put(1.5,0.5){\rotatebox{60}{\textcolor{lightgray}{\fontsize{80}{80}
+\bfseries PROOF TO VALIDATED}}}
+}
+
+\input{metadata}
+
+\runningtitle{EUROPEAN REHABILITATION JOURNAL Template on Overleaf} % For use in the footer 
+
+%% For the footnote.
+%% Give the last name of the first author if only one author;
+% \runningauthor{FirstAuthorLastname}
+%% last names of both authors if there are two authors;
+% \runningauthor{FirstAuthorLastname and SecondAuthorLastname}
+%% last name of the first author followed by et al, if more than two authors.
+\runningauthor{Lebret \textit{et al.}}
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{firststyle}
+\marginmark
+\firstpagefootnote
+% Use the \equalcontrib command to mark authors with equal
+% contributions, using the relevant superscript numbers
+\equalcontrib{1}
+\equalcontrib{2}
+\correspondingauthoraffiliation{3}{Corresponding author:
+\\
+Marius Lebret 
+\\
+Agir à dom.
+\\
+36 Chemin du Vieux Chêne, 
+\\
+38244 Meylan
+\\
+France
+\\
+GSM: +33618561003
+\\
+e-mail: mariuslebret@gmail.com
+}
+\vspace{-33pt}% Only used for adjusting extra space in the left column of the first page
+
+\input{main}
+\newpage
+\input{acknowledgement}
+\bibliography{biblio}
+
+\end{document}

@@ -1,0 +1,265 @@
+%\lettrine[lines=2]{\color{color2}T}{}his \textit{Genetics} journal template is provided to help you write your work in the correct journal format. Instructions for use are provided below. Note that by default line numbers are present to aid reviewers and editors in reading and commenting on your manuscript. To remove line numbers, remove the \texttt{lineno} option from the \verb|\documentclass| declaration. 
+
+%\section{Guide to using this template in Overleaf}
+
+%This template is provided to help you prepare your article for submission to the \textit{Genetics}.
+
+%\section{Author Affiliations}
+
+%For the authors' names, indicate different affiliations with the symbols: $\ast$, $\dagger$, $\ddagger$, $\S$. After four authors, the symbols double, triple, quadruple, and so forth as required.
+
+%\section{Your Abstract}
+
+%In addition to the guidelines provided in the example abstract above, your abstract should:
+
+%\begin{itemize}
+%\item provide a synopsis of the entire article;
+%\item begin with the broad context of the study, followed by specific background for the study;
+%\item describe the purpose, methods and procedures, core findings and results, and conclusions of the study;
+%\item emphasize new or important aspects of the research;
+%\item engage the broad readership of GENETICS and be understandable to a diverse audience (avoid using jargon);
+%\item be a single paragraph of less than 250 words;
+%\item contain the full name of the organism studied;
+%\item NOT contain citations or abbreviations.
+%\end{itemize}
+
+\section{Introduction}
+\textbf{}
+\hspace{\par}
+Continuous Positive Airway Pressure (CPAP) is the first-line treatment for moderate to severe Obstructive Sleep Apnea (OSA) \citep{levy, patil}. Although adherence to CPAP is crucial for improving symptoms \citep{weaver2007}, more than 50\% of patients discontinue or are poorly adherent over the long term \citep{weaver2008, mcevoy}. The causes of CPAP discontinuation are multifactorial \citep{gagnadoux, borel}, with unintentional leakage from the mouth or around the mask being one of the most common side effects of CPAP-therapy contributing to non-adherence \citep{bachour2004, valentin}. However, the explanatory factors behind unintentional leaks are poorly understood, and as a consequence, their management poorly established \citep{lebret2017}.
+
+In daily practice, when a patient is complaining of unintentional leakage, caregivers adjust the mask, frequently shift from a nasal to an oro-nasal mask, or install a chinstrap. Nevertheless, these strategies are not always effective in reducing leakage or improving patient complaints \citep{bachour2015}, and the identification of the true determinants of leakage remains elusive \citep{lebret2018}. The potential mechanisms triggering leak emergence are not addressed by the software embedded by manufacturers in CPAP devices. Furthermore, the terminology used to report leaks varies across CPAP brands and there are no clear thresholds defining when it would be appropriate to implement a leak correction process \citep{schwab}.
+
+In a recent study, we proposed a novel methodology for characterizing and analyzing the overnight determinants of unintentional leakage using polysomnographic recordings in OSA patients treated with automatic CPAP (i.e. the OSA-auto-CPAP population) \citep{lebret2018}. We demonstrated that REM sleep, mouth opening, sleep position and pressure level were determinants of leakage. However, due the size of the problem and the inaccessibility, resource use and costs associated with polysomnography, we further proposed a simplified recording system using a type-3 polygraphic device (Somnolter®, Liège, Belgium). 
+
+\textbf{Our primary objective} was to describe the individual specific determinants of unintentional leaks provided by the Somnolter® device software in an OSA-auto-CPAP population using nasal masks in real life conditions. \textbf{The secondary objective} was to describe, based on this analysis, the clinical consensus of 4 physicians on how to manage individual leak situations.
+
+
+\section{Methods}
+\label{sec:methods}
+
+\textbf{This study was performed in three phases:}
+
+\medbreak
+
+\textbf{First phase: Data collection}
+
+A retrospective analysis of polygraphic recordings carried-out in routine care in 3 French centers (Boujan sur Libron Polyclinic, Montpellier and Grenoble University Hospitals, France) was performed. This study was approved by a local institutional review board (2017\_CLER-MTP\_12-03) and was registered on https://clinicaltrials.gov (NCT03381508). All participants were informed about the research objectives and were given the opportunity to oppose the use of their personal data as required per French law.
+
+Between June 1, 2017 and December 31, 2017, consecutive adult patients diagnosed with moderate to severe OSA (apnea-hypopnea index [AHI] $>$ 15/h) who had a type III polygraphy  (with Somnolter®)  for control of auto-CPAP efficacy were included.
+
+Polygraphy was performed with the Somnolter® (Fig \ref{fig:fig1}) equipped with:
+\begin{itemize}
+    \item A midsagittal mandibular magnetic movement sensor to measure the distance in millimeters between two parallel coupled resonant circuits placed on the forehead and the chin \citep{senny}.
+    \item A pneumotachograph measuring the patient’s airflow, CPAP level, and leakage.
+    \item A digital oximeter that displayed the pulse waveform (Nonin, Nonin Medical) and measured the arterial oxygen saturation.
+    \item A positional sensor that recorded body position during sleep.
+\end{itemize}
+
+\textbf{(See online supplement, paragraph I for further details)}
+ 
+ Medical history, anthropometric data, the Epworth Sleepiness Score at the time of the polygraphy, smoking status, the use of a chinstrap, the use of a heated tube/humidifier, the type and model of the mask, and the initial AHI were collected from patient medical charts.
+ 
+\medbreak
+ 
+\textbf{Second phase: detailed analysis of polygraphic recordings, including automatic analysis of the determinants of unintentional leaks}
+
+Polygraphic recordings were analyzed with APIOS software version 2.0. This version of APIOS deploys the automatic analysis of the determinants of unintentional leaks previously developed by our team \citep{lebret2018}: Signals from the poplygraphic recording are automatically computed as mean values over non-overlapping 10-s intervals (mouth opening and CPAP pressure). Categorical data (sleep position), as well as dichotomous data (mandibular oscillation ($\le$0.3 vs $>$ 0.3, mm)), are also computed for intervals of 10 s. Then, each variable is analyzed for every consecutive 10-s interval. Univariate conditional regression models are used to estimate the risk of leakage during a “T-interval” using the above mentioned variables predefined from the previous interval (“T-1”). Since there are no reports of a clinically significant threshold of unintentional leakage in the literature, the presence of unintentional leakage in an interval can be classified in a dichotomous manner regarding a chosen threshold “X” in L/min (yes or no: $>/\le$ “X” L/min). 
+
+For each polygraphic recording analyzed with APIOS, the software provided the odds ratio and the confidence intervals of the following potential determinants of unintentional leaks:
+\begin{itemize}
+    \item Mouth opening ($\le$ median vs $>$ median of the night)
+    \item CPAP pressure ($\le$/ median vs $>$ median of the night)
+    \item Body position (other versus supine)
+    \item Mandibular oscillation ($\le$/0.3 vs $>$ 0.3, mm)
+\end{itemize}
+
+\textbf{(See online supplement, paragraph II for further details)}
+\medbreak
+
+\textbf{Leakage calculation}
+
+The pressure/flow curve for intentional leaks corresponding to each mask model used was embedded into the APIOS software and used for the calculation of the unintentional leaks (see online supplement, paragraph I  for further details). Since there is no clear threshold of unintentional leaks defining when it would be appropriate to implement correcting interventions \citep{schwab}, we ran the automatic analysis at 3 arbitrary unintentional leak thresholds: 5 l/min, 10 l/min and 20 l/min.
+
+\medbreak
+
+\textbf{Third phase: Clinical consensus}
+
+Based on the results provided by the automatic analysis of the determinants of unintentional leaks provided by APIOS, each of four physicians (DJ, JPM, ML, JCB) was asked to choose one of four strategies [(i)	increase or decrease therapeutic pressure; (ii) change nasal mask for oro-nasal mask or add a chinstrap; (iii) favor a non-supine or supine position; (iv) no action] for individual leak management in a blinded fashion. Subsequently, a meeting was held to discuss blinded results and then determine a collective consensus choice from among the four strategies for each individual case. \textbf{See figure \ref{fig:fig2} for methods overview}
+
+\section{Statistical Analysis} 
+\textbf{}
+\hspace{\par}
+Data did not follow a Gaussian distribution and were summarized as medians and interquartile ranges (IQR). Qualitative parameters (characteristics and type of interface) were expressed as counts and percentages. All statistical analyses were performed with SAS enterprise guide (V.7.1).
+
+To achieve the first objective, patient-specific heatmaps were created and reported the crude odds ratios (OR) and 95\% confidence intervals (95\%CI) for potential leak determinants as provided by APIOS. To achieve the second objective, the latter heatmaps were provided to the participating physicians who then independently proposed one of the four above-listed leak management strategies. Finally, Cohen $\kappa$ coefficients were used to measure inter-rater concordance four clinical strategies. 
+
+\textbf{Sample size calculation:} considering the exploratory nature of this study that use an original analysis, no previous data from which sample size could be calculated were available. However, we aimed to include 50 patients who had performed Somnolter® polygraphy while using nasal masks between June 1st and December 31st 2017. Considering that about 75\% of patients use a nasal mask in routine care in France (sample size equivalent to previous studies comparing different types of masks \citep{borel, lebret2018}), we estimated that at least 75 consecutive patients would need to be screened in order to analyze 50 patients treated with a nasal mask.
+
+
+\section{Results}
+\textbf{}
+\hspace{\par}
+Over a 6-month period, 78 consecutive adult patients underwent a home polygraphy with Somnolter® under auto-CPAP. e-Figure 6 in the online supplement depicts the study flow chart. Two recordings could not be used because of missing data related to technical problems, and 26 polygraphies were carried out using an oronasal mask. In consequence, a total of 50 home-polygraphy recordings were finally analyzed.
+\newline
+
+\textit{Patient characteristics and treatment parameters}
+
+Patient characteristics are presented in Table \ref{tab:pop}. All patients were parameterized with 4-14 cmH20 for auto-CPAP, as is typical of OSA-auto-CPAP populations. 
+\newline
+
+\textit{Main objective, description of unintentional leak determinants}
+
+Figure \ref{fig:fig3} represents the determinants of unintentional leaks according to three different thresholds. Each cell represents the individual risk for (i) a given patient, for a given determinant (ii) and at (iii) a given threshold of unintentional leaks.
+
+As an example, patient \#37 should be interpreted as follows: the mouth opening above the overnight median increased the risk of leaks regardless of leak thresholds; similarly, a non-supine position also increased the risk of leaks across all thresholds. In contrast, a pressure above the overnight median pressure reduced the risk of leaks across all leak threshold for this patient. For patient \#1, a mandibular oscillation superior to 0.3mm (a surrogate marker of respiratory effort) increased the risk of leaks regardless of thresholds
+
+In four subjects, there were inconsistencies in leak determinants across the different leak thresholds in our analysis (subjects \#2, \#7, \#24 and \#47). For example, in subject \#2 a "non-supine position” was “protective” at 5 l/min, but increased the risk of leakage at 10 l/min; in subject \#7, mouth opening was "protective" at 10 l / min, but favored leaks at 20 l / min. Last, for several patients (examples \#23, 39, 40), the automatic analysis was incalculable for reasons cited in the paragraph II of the online supplement.
+\newline
+
+\textit{Secondary objective, clinical consensus for individualized leak management}
+
+Table \ref{tab:cohen} reports the Cohen $\kappa$ coefficients among clinicians. The average Cohen $\kappa$ coefficient for all raters was 0.58. Figure \ref{fig:fig3} reports the final consensus of the 4 clinicians on individual clinical management. Pressure modification was proposed in 36\% of patients, no action in 24\% of patients, installation of a facial mask or a chinstrap in 22\% of patients and positional treatment in 18\%.
+
+\section{Discussion}
+
+We have demonstrated that a routine inspection with a ventilatory type III polygraph providing an individual diagnosis of unintentional leaks is routinely feasible. In this 50-patient, OSA-auto-CPAP population, the determinants of intentional leakage were heterogeneous, which highlights the importance of individualized leak management. Finally, based on the results from this analysis, we were able to establish consensus leak management strategies at the individual level.
+
+To date, there are no data defining a tolerable unintentional leakage threshold beyond which leakage correction measures should be undertaken \citep{schwab, valentin}. For this reason, we performed the leak determinant analyses with 3 arbitrarily chosen leakage thresholds (5, 10 and 20 l/m). In addition, because leakage-related disturbances are not correlated with the magnitude of leaks objectively reported by built-in software \citep{bachour2013}, it remains challenging to a priori determine an appropriate leak threshold for future analyses. One benefit, therefore, of our automatic analysis is that a clinician can rapidly screen for the determining factors of leaks at different leakage thresholds in order to identify the most relevant one.
+
+Overall, the risk of unintentional leakage associated with a given determinant was consistent across the different leakage thresholds for a given patient. Mouth opening remained the principal leak determinant (27 patients). This is consistent with our previous results in which mouth opening was independently associated with the presence of unintentional leakage during sleep \citep{lebret2018}. However, the interpretation of leak determinants for a given patient appeared to be more complex when the determinants were inconsistent across different leak thresholds (as occurred for 4 patients in our study).
+
+Figure \ref{fig:fig3} spotlights the individual specificity of leak determinants, their great diversity and illustrates the need for a tailored, patient-by-patient, clinical approach. The difficulty resides in choosing the appropriate strategy for leak correction. We demonstrated that the inter-rater reliability when choosing a preferred unintentional leak management strategy among experts was “fair” according to Cicchetti \& Sparrow, with a Cohen $\kappa$ of 0.58 \citep{cicchetti1981, cicchetti2001}. Further progress can perhaps be made in this domain.
+
+Our work has two important limitations that must be taken into account: first, the patients included in this retrospective study were consecutive subjects in whom the severity of complaints related to leaks was not documented. One can argue that the leak determinants found in a population with few, weak or no specific complaints are different from those of a population actively complaining of leaks. Secondly, the consensus strategies indicated by the participating physicians remain “theoretical” and we don’t know how much they helped patients with the current dataset (this will of course be addressed by future studies). Furthermore, generalizability to the entire OSA-auto-CPAP population is compromised because only patients who used a nasal mask were included. Indeed, we previously demonstrated that mask type influences leak determinants \citep{lebret2018}, and were unwilling (for simplicity’s sake) to introduce this confounding factor by taking into account oronasal and nasal pillows, which are second-line interfaces. 
+
+In conclusion, the use of type-3 polygraphy for characterizing leak determinants in OSA populations requiring automatic CPAP treatment with nasal masks is feasible in routine practice. Leak determinants are heterogeneous, patient specific, and can vary with leak thresholds in certain cases. A first estimation of concordance among physicians for determining individual leak management strategies demonstrated only a “fair” level of agreement, indicating room for improvement in how leak determinants are interpreted. 
+
+
+%\section{Additional guidelines}
+
+%\subsection{Numbers} In the text, write out numbers nine or less except as part of a date, a fraction or decimal, a percentage, or a unit of measurement. Use Arabic numbers for those larger than nine, except as the first word of a sentence; however, try to avoid starting a sentence with such a number.
+
+%\subsection{Units} Use abbreviations of the customary units of measurement only when they are preceded by a number: "3 min" but "several minutes". Write "percent" as one word, except when used with a number: "several percent" but "75\%." To indicate temperature in centigrade, use ° (for example, 37°); include a letter after the degree symbol only when some other scale is intended (for example, 45°K).
+
+%\subsection{Nomenclature and Italicization} Italicize names of organisms even when  when the species is not indicated.  Italicize the first three letters of the names of restriction enzyme cleavage sites, as in HindIII. Write the names of strains in roman except when incorporating specific genotypic designations. Italicize genotype names and symbols, including all components of alleles, but not when the name of a gene is the same as the name of an enzyme. Do not use "+" to indicate wild type. Carefully distinguish between genotype (italicized) and phenotype (not italicized) in both the writing and the symbolism.
+
+%\subsection{Cross References}
+%Use the \verb|\nameref| command with the \verb|\label| command to insert cross-references to section headings. For example, a \verb|\label| has been defined in the section \nameref{sec:materials:methods}.
+
+%\section{In-text Citations}
+%Add citations using the \verb|\citep{}| command, for example \citep{neher2013genealogies} or for multiplE citations,
+%\citep{neher2013genealogies, rodelsperger2014characterization, Falush16}
+%\citep{levy, patil, weaver2007, weaver2008, mcevoy, gagnadoux, borel, bachour2004, valentin, lebret2017, bachour2015, lebret2018, schwab, senny, bachour2013, cicchetti1981, cicchetti2001}
+
+\section{Figures and Tables}
+
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=\linewidth]{Fig1.png}
+\caption{Polygraphic assesment with the somnolter device
+\textbf{A.} patients’ vital signs were recorded at home with the somnolter device while treated with CPAP (pneumotachograph, mandibular movement sensor, oxymetry, thoracic belts and body position sensor). \textbf{B.} data of interest were obtained with the polygraphic device for each patient (unintentional leak flow, mandibular lowering and oscillation, CPAP pressure, body position, respiratory flow and SpO2)}%
+\label{fig:fig1}
+\end{figure}
+
+\begin{figure}[htbp!]
+\centering
+\includegraphics[width=\linewidth]{Fig2.png}
+\caption{Analysis of the determining factors of unintentional leaks and consensus on individual leak management (methods).
+*the new version of APIOS embeds the automatic analysis of the determinants of leaks; †example for a given patient
+}%
+\label{fig:fig2}
+\end{figure}
+
+\begin{figure}[H]%[htbp!]
+\centering
+\includegraphics[width=\linewidth]{Fig3.png}
+\caption{Heat Map displaying the individualized representation of the determinants of leaks. This figure reports the risk (OR: Odds Ratio) associated with the 4 determinants of leaks for every patient according to three different thresholds of leaks. Every cell represents the individual risk for a given patient, for a given determinant at a given threshold of NI leaks using a color code.
+Green represents a OR$<$1. The darker it is, the closer the OR is to 0. Conversely, red represents a OR$>$1, the darker it is, the higher is the OR and so the risk. White cells represent a OR which the confidence interval cross 1 (non-significant).
+Mouth opening $>$ median overnight mouth opening; CPAP pressure $>$ median overnight pressure; mandibular oscillation $>$ 0,3 mm. NC: non-calculable, there were specific conditions for which the odds ratio were non-calculable (supplemental material)}%
+\label{fig:fig3}
+\end{figure}
+
+%\subsection{Sample Video}
+
+%Figure \ref{video:spectrum} shows how to include a video in your manuscript.
+
+
+
+%\begin{figure}[H]
+ %   \centering
+  %  \includegraphics[scale=0.19]{nb_dt.jpg}
+   % \caption{Evolution de la précision de la position finale en fonction du pas de temps}
+%\label{nb_dt}
+%\end{figure}
+
+
+%\subsection{Sample Table}
+
+%Table \ref{tab:shape-functions} shows an example table. Avoid shading, color type, line drawings, graphics, or other illustrations within tables. Use tables for data only; present drawings, graphics, and illustrations as separate figures. Histograms should not be used to present data that can be captured easily in text or small tables, as they take up much more space.  
+
+%Tables numbers are given in Arabic numerals. Tables should not be numbered 1A, 1B, etc., but if necessary, interior parts of the table can be labeled A, B, etc. for easy reference in the text.  
+
+
+\begin{table*}[htbp]
+\centering
+\caption{\bf Population characteristics (n=50)}
+\begin{tableminipage}{\textwidth}
+\begin{tabularx}{\textwidth}{XXXX}
+\hline
+\textbf{Population characteristics (n=50)} &  \\
+\hline
+Age (yrs) & 65 [57; 75]\\
+Gender, female (\%) & 16 (32)\\
+BMI (kg/m$^2$) & 31.1 [27.4; 35.3]\\
+AHI (nb events/h) at diagnosis & 37.1 [31.0; 46.7]\\
+Current smokers (\%) & 5 (10.6)\\
+Epworth Sleepiness Scale (score) & 11 [9; 15]\\
+
+\hline
+\textbf{Comorbidities} &  \\
+\hline
+Chronic cardiac insufficiency & 15 (30.6)\\
+Chronic respiratory insufficiency & 6 (12.2)\\
+High blood pressure & 24 (50)\\
+Diabetes type 1 & 0 (0)\\
+Diabetes type 2 & 7 (14.3)\\
+
+\hline
+\textbf{Device} &  \\
+\hline
+Heating humidifier & 17 (34)\\
+Heating circuit & 2 (4)\\
+Chinstrap & 1 (2.2)\\
+
+\hline
+{\raggedright AHI : Apnea-Hypopnea Index, score, BMI : Body Mass Index, CPAP: Continuous Positive Airway Pressure, ESS: Epworth Sleepiness Scale. Data are reported as medians and quartiles or numbers and percentages, as appropriate.}
+\end{tabularx}
+  \label{tab:pop}
+\end{tableminipage}
+\end{table*}
+
+
+\begin{table*}[htbp]
+\centering
+\caption{\bf Cohen $\kappa$ coefficients among all raters regarding choice of clinical leak management strategy.}
+\begin{tableminipage}{\textwidth}
+\begin{tabularx}{\textwidth}{XXXXX}
+\hline
+ &  Physician 1 & Physician 2 & Physician 3 & Physician 4\\
+\hline
+Physician 1 & 1 & & &\\
+Physician 2 & 0.70 [0.55-0.84] & 1 & &\\
+Physician 3 & 0.56 [0.41-0.71] & 0.61 [0.46-0.76] & 1 &\\
+Physician 4 & 0.54 [0.40-0.69] & 0.47 [0.32-0.66] & 0.58 [0.43-0.73] & 1\\
+
+\hline
+\end{tabularx}
+  \label{tab:cohen}
+\end{tableminipage}
+\end{table*}
+
+
+
+
+
