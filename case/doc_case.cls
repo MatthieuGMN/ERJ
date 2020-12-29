@@ -221,7 +221,7 @@
 
 % Colored margin box
 \newcommand{\marginmark}{
-\begin{textblock}{2}(115.5,15) 
+\begin{textblock}{2}(112,15) 
 \begin{tikzpicture}
 \fill[color=color2] (0,0) rectangle (100,0.25);
 \end{tikzpicture}
@@ -239,6 +239,39 @@ NOT USE {\tt\string\begin...\string\end} COMMANDS WITHIN
 THE ABSTRACT\vskip12pt}\let\go\relax\fi
 \go}
 
+% Set environment for abstract content and styling
+\newcommand{\abscontent}{
+    \noindent
+{%
+\parbox{\dimexpr\linewidth}{%
+    %% v1.8: turn on line numbers
+	\ifthenelse{\boolean{displaylineno}}{\internallinenumbers}{}%
+    {\absfont\bfseries ABSTRACT} \absfont \theabstract
+}%
+\vskip10pt%
+\noindent
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+ %% v1.8: turn on line numbers
+\ifthenelse{\boolean{displaylineno}}{\internallinenumbers}{}%
+{\keywordsfont\bfseries\keywordname}\hspace*{0.1em} \keywordsfont \@keywords%
+}%
+\vskip20pt%
+\noindent
+\parbox{\dimexpr\linewidth}{%
+    %% turn on line numbers
+	\ifthenelse{\boolean{displaylineno}}{\internallinenumbers}{}%
+    {\absfont\bfseries RÉSUMÉ} \absfont \theabstract
+}%
+\vskip10pt%
+\noindent
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+ %% turn on line numbers
+\ifthenelse{\boolean{displaylineno}}{\internallinenumbers}{}%
+{\keywordsfont\bfseries\keywordname[1]}\hspace*{0.1em} \keywordsfont \@keywords%
+}%
+}%
+}%
+
 % Custom title page
 \renewcommand{\@maketitle}{\bgroup\setlength{\parindent}{0pt}
 \begin{flushright}
@@ -253,7 +286,6 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 {\raggedright \noindent$\dagger$These authors contributed equally to this work.\par}
 \vskip5pt%
 {\raggedright \noindent DOI: 10.1534/genetics.XXX.XXXXXX\par} 
-
 % Data Manuscript
 {\raggedright \Manuscript received : \today \par}
 {\raggedright \Manuscript accepted: \today \par}
@@ -262,8 +294,12 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 
 {%
 {\color{black50}\rule{\linewidth}{0.5pt}}
+\vskip12pt%
+\abscontent
+\vskip12pt%
+\color{black50}\rule{\linewidth}{0.5pt}
 }%
-\vskip40pt%
+\vskip25pt%
 }%
 
 % Other packages
