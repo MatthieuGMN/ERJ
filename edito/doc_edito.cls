@@ -138,7 +138,7 @@
 \pagestyle{fancy}          % Enables the custom headers/footers
 
 \fancypagestyle{firststyle}{
-   \fancyhead[C]{{\watermarkfont REHABILITATION |} 
+   \fancyhead[C]{{\watermarkfont EUROPEAL REHABILITATION JOURNAL |} 
    \headerfont \articletypename} % C for centre
    \fancyhead[R]{} %
 }
@@ -221,7 +221,7 @@
 
 % Colored margin box
 \newcommand{\marginmark}{
-\begin{textblock}{2}(115.5,15) 
+\begin{textblock}{2}(142,15) 
 \begin{tikzpicture}
 \fill[color=color2] (0,0) rectangle (100,0.25);
 \end{tikzpicture}
