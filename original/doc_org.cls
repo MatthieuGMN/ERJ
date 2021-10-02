@@ -6,7 +6,7 @@
 % Produced by Overleaf (www.overleaf.com)
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{rehab}[26/05/2020, v1]
+\ProvidesClass{doc_org}[26/05/2020, v1]
 \AtEndOfClass{\RequirePackage{microtype}}
 
 % Options for element switching
@@ -44,9 +44,9 @@
 \RequirePackage[colorlinks=true, allcolors=blue]{hyperref}
 \RequirePackage{lettrine}
 
-\newcommand{\watermarkfont}{\color{black80}\normalfont\fontsize{15}{12}\selectfont}
+\newcommand{\watermarkfont}{\color{black50}\normalfont\fontsize{15}{12}\selectfont}
 \newcommand{\headerfont}{\color{color2}\normalfont\sffamily\bfseries\fontsize{14}{12}\selectfont}
-\newcommand{\titlefont}{\normalfont\sffamily\bfseries\fontsize{24}{30}\selectfont}
+\newcommand{\titlefont}{\normalfont\sffamily\bfseries\fontsize{20}{25}\selectfont}
 \newcommand{\datesfont}{\normalfont\sffamily\itshape\fontsize{8}{10}\selectfont}
 \renewcommand\UrlFont{\color{color1}\sffamily}
 \newcommand{\absfont}{\normalfont\sffamily\linespread{1.2}\fontsize{10}{12}\selectfont}
@@ -153,7 +153,8 @@
 \chead{}
 \rhead{}
 \fancyhead[LO,LE]{} % Blank headers for non-title pages.
-\fancyhead[RE,RO]{\@runningauthor \hspace{2em} \ }
+\fancyhead[RE,RO]{\@runningauthor \hspace{2em} \thepage\ }
+
 
 % Footers
 \lfoot{}
@@ -217,14 +218,14 @@
 \newcommand{\keywords}[1]{\def\@keywords{#1}}
 \newcommand{\runningtitle}[1]{\def\@runningtitle{#1}}
 
-\newcommand{\keywordname}{KEYWORDS} % Defines the keywords heading name
+\newcommand{\keywordname}{KEYWORDS:} % Defines the keywords heading name
 %\newcommand{\keywordname}[1]{MOTS-CLÉS} % Defines the keywords heading name
 
 % Colored margin box
 \newcommand{\marginmark}{
-\begin{textblock}{2}(141,15) 
+\begin{textblock}{2}(-10,10) 
 \begin{tikzpicture}
-\fill[color=color2] (0,0) rectangle (100,0.25);
+\fill[color=color2] (0,0.10) rectangle (5,0.20);
 \end{tikzpicture}
 \end{textblock}
 }
@@ -261,7 +262,7 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 
 % Custom title page
 \renewcommand{\@maketitle}{\bgroup\setlength{\parindent}{0pt}
-\begin{flushright}
+\begin{flushleft}
 {%
 \vskip50pt%
 {\raggedright \titlefont \@title\par}%
@@ -272,45 +273,15 @@ THE ABSTRACT\vskip12pt}\let\go\relax\fi
 %author contribution
 %{\raggedright \noindent$\dagger$These authors contributed equally to this work.\par}
 %\vskip5pt%
-{\raggedright \noindent DOI: 10.1534/genetics.XXX.XXXXXX\par} 
+{\raggedright \noindent DOI: 10.52057/erj.vXiX.X\par} 
 % Data Manuscript
-{\raggedright \Manuscript received : \today \par}
-{\raggedright \Manuscript accepted: \today \par}
+{\raggedright received: 21 May 2021 \par}
+{\raggedright accepted: 20 August 2021 \par}
 }%
 
 \vskip5pt%
-% Conflict of interest
-{\raggedright \noindent \textbf{Conflict of interest:}
-\\
-ML and JCB are employees of “AGIR à dom.”, a non-profit home care provider. JCB has received grants, personal fees, and non-financial support from Philips healthcare, RESMED outside the context of the submitted work. JCB has also a patent with NOMICS SA. ML has received grants, personal fees, and non-financial support from Air Liquide Healthcare and SEFAM outside the context of the submitted work. JLP is  supported by a research grant from the French National Research Agency (ANR-12-TECS-0010) in the framework of the “Investissements d’avenir” program (ANR-15-IDEX-02) and the “e-health and integrated care” Chair of excellence of the University Grenoble Alpes Foundation. JCB and JLP are co-inventors of a patent N # WO2016041025A1. The others authors (DN, CS, MCR, JPM, LL, EML, NM) have no conflicts to disclose linked to this work.\par}
 
-\vskip5pt%
-% Abbreviations list
-{\raggedright \noindent \textbf{Abbreviations list:}
-\\
-AHI : Apnea Hypoxia Index
-\\
-BMI : Body Mass Index
-\\
-CPAP : Continuous Positive Airway Pressure 
-\\
-ESS : Epworth Sleepiness Scale
-\\
-IQR : Inter Quartile Range
-\\
-OSA : Obstructive Sleep Apnea
-\\
-REM Sleep : Rapid Eye Movement Sleep
-\\
-SD : Standard Deviation
-\\
-SpO2 : Peripheral capillary oxygen saturation
-\\
-OR : Odds Ratio
-\\
-NC : Non-calculable\par}
-
-\end{flushright}\egroup
+\end{flushleft}\egroup
 
 {%
 {\color{black50}\rule{\linewidth}{0.5pt}}
@@ -372,6 +343,13 @@ NC : Non-calculable\par}
   %% v1.8: turn on line numbers after this
   \ifthenelse{\boolean{displaylineno}}{\par\linenumbers}{}
 }
+
+\newcommand{\equalcontrib}[1]{\@authfootnote{#1}{These authors contributed equally to this work.}}
+
+\newcommand{\firstpagefootnote}{\blfootnote{\copyrightfont \ifthenelse{\boolean{displaycopyright}}{\copyrightstatement}{}\\%
+doi: 10.52057/erj.vXiX.X \\%
+Manuscript compiled: \today%
+}}
 
 \newenvironment{tableminipage}[1]{\begin{minipage}{#1}\renewcommand\footnoterule{ \kern -1ex}%
 \setlength{\myFootnoteLabel}{0.5em}%

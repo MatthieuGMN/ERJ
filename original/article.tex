@@ -6,12 +6,12 @@
 
 \AddToShipoutPicture{\unitlength=1cm % to release when finalizing an abstract.
 \put(1.5,0.5){\rotatebox{60}{\textcolor{lightgray}{\fontsize{80}{80}
-\bfseries PROOF TO VALIDATED}}}
+\bfseries PROOF FOR VALIDATION}}}
 }
 
 \input{metadata}
 
-\runningtitle{EUROPEAN REHABILITATION JOURNAL Template on Overleaf} % For use in the footer 
+\runningtitle{Eur Rehab J. 2021 DOI: 10.52057/erj.vXiX.X} % For use in the footer 
 
 %% For the footnote.
 %% Give the last name of the first author if only one author;
@@ -19,7 +19,8 @@
 %% last names of both authors if there are two authors;
 % \runningauthor{FirstAuthorLastname and SecondAuthorLastname}
 %% last name of the first author followed by et al, if more than two authors.
-\runningauthor{Lebret \textit{et al.}}
+\runningauthor{Beaudart \textit{et al.}}
+
 \begin{abstract}
 \input{abstract}
 \end{abstract}
@@ -29,32 +30,27 @@
 \maketitle
 \thispagestyle{firststyle}
 \marginmark
-\firstpagefootnote
-% Use the \equalcontrib command to mark authors with equal
-% contributions, using the relevant superscript numbers
-\equalcontrib{1}
-\equalcontrib{2}
-\correspondingauthoraffiliation{3}{Corresponding author:
+
+% SFP logo
+\begin{picture}(0,0)
+\put(440,530){\includegraphics[scale=0.3]{original/sfp_logo.png}}
+\end{picture}
+
+%\firstpagefootnote
+\correspondingauthoraffiliation{}{Corresponding author:
 \\
-Marius Lebret 
-\\
-Agir à dom.
-\\
-36 Chemin du Vieux Chêne, 
-\\
-38244 Meylan
-\\
-France
-\\
-GSM: +33618561003
-\\
-e-mail: mariuslebret@gmail.com
+Dr. Charlotte Beaudart, CHU Liège, Service de médecine de l'appareil locomoteur, Bât. CNRF Centre Neurologique et de Réadaptation Fonctionnelle, Rue Champ des Alouettes 30, 4557 Tinlot, BELGIUM
+e-mail: \color{blue}{c.beaudart@uliege.be}
+
 }
 \vspace{-33pt}% Only used for adjusting extra space in the left column of the first page
 
 \input{main}
-\newpage
+
+%\newpage
+%\input{conflicts}
 \input{acknowledgement}
+
 \bibliography{biblio}
 
 \end{document}
