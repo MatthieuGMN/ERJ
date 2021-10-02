@@ -1,0 +1,47 @@
+\documentclass[9pt,twocolumn,twoside]{doc_edito}
+% Use the documentclass option 'lineno' to view line numbers
+
+\articletype{edi} % article type
+% {org} original 
+% {case} case report
+
+% for pree-proof
+%\AddToShipoutPicture{\unitlength=1cm % to release when finalizing an abstract.
+%\put(1.5,0.5){\rotatebox{60}{\textcolor{lightgray}{\fontsize{80}{80}
+%\bfseries PROOF TO VALIDATED}}}
+%}
+
+\input{meta_edito}
+
+\runningtitle{Eur Rehab J. 2021 DOI: 10.52057/erj.v1i1.6} % For use in the footer 
+
+%% For the footnote.
+%% Give the last name of the first author if only one author;
+% \runningauthor{FirstAuthorLastname}
+%% last names of both authors if there are two authors;
+% \runningauthor{FirstAuthorLastname and SecondAuthorLastname}
+%% last name of the first author followed by et al, if more than two authors.
+\runningauthor{Matthieu Guémann \textit{et al.}}
+
+\begin{document}
+\maketitle
+\thispagestyle{firststyle}
+\marginmark
+
+% SFP logo
+\begin{picture}(0,0)
+\put(450,210){\includegraphics[scale=0.25]{edito/sfp_logo.png}}
+\end{picture}
+%(450,210) default positionning
+
+%\firstpagefootnote
+\correspondingauthoraffiliation{}{Matthieu Guémann, French Armed Forces Biomedical Research Institute, Brétigny-sur-Orge, France
+mail : matthieu.guemann@intradef.gouv.fr 
+ORCiD: 0000-0003-1896-2796}
+\vspace{-10pt}% Only used for adjusting extra space in the left column of the first page
+
+\input{main_edito}
+
+\bibliography{biblio_edito}
+
+\end{document}
