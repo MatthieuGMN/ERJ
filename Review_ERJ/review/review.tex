@@ -1,0 +1,48 @@
+\documentclass[9pt,twocolumn,twoside]{doc_review}
+% Use the documentclass option 'lineno' to view line numbers
+
+\articletype{review} % article type
+% {org} original 
+
+%\AddToShipoutPicture{\unitlength=1cm % to release when finalizing an abstract.
+%\put(1.5,0.5){\rotatebox{60}{\textcolor{lightgray}{\fontsize{80}{80}
+%\bfseries PROOF VALIDATION}}}
+%}
+
+\input{meta_review}
+
+\runningtitle{Eur Rehab J. 2021 DOI: 10.52057/erj.v1i1.2} % For use in the footer 
+
+%% For the footnote.
+%% Give the last name of the first author if only one author;
+% \runningauthor{FirstAuthorLastname}
+%% last names of both authors if there are two authors;
+% \runningauthor{FirstAuthorLastname and SecondAuthorLastname}
+%% last name of the first author followed by et al, if more than two authors.
+\runningauthor{Medrinal \textit{et al.}}
+
+\begin{abstract}
+\input{review/abstract}
+\end{abstract}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{firststyle}
+\marginmark
+
+% SFP logo
+\begin{picture}(0,0)
+\put(450,420){\includegraphics[scale=0.25]{sfp_logo.png}}
+\end{picture}
+
+%\firstpagefootnote
+\correspondingauthoraffiliation{}{\textbf{Corresponding author:} Clément Medrinal, Groupe Hospitalier du Havre, ICU department, avenue Pierre Mendes France 76290 Montivilliers, France
+\url{medrinal.clement.mk@gmail.com}}
+\vspace{-18pt}% Only used for adjusting extra space in the left column of the first page
+
+\input{review/main_review}
+
+\bibliography{review/biblio_review}
+
+\end{document}
